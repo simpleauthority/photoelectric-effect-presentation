@@ -1,35 +1,37 @@
 <script setup>
-import PresentationContainer from './components/presentation/PresentationContainer.vue';
-import AAATitleSlide from "./components/presentation/slides/AAATitleSlide.vue"
-import BBBSecondSlide from "./components/presentation/slides/BBBSecondSlide.vue"
+import PresentationContainer from './components/PresentationContainer.vue';
+import TitleSlide from './components/slides/TitleSlide.vue';
+import TopicOverview from './components/slides/TopicOverview.vue';
+import FirstTopicSlide from './components/slides/FirstTopicSlide.vue';
+import TopicOverviewReminder from './components/slides/TopicOverviewReminder.vue';
+import SecondTopicSlide from './components/slides/SecondTopicSlide.vue';
+import FinalTopicOverview from './components/slides/FinalTopicOverview.vue';
+import FinalTopicSlide from './components/slides/FinalTopicSlide.vue';
+import TopicOverviewRecap from './components/slides/TopicOverviewRecap.vue';
+
+const bigIdeas = [
+  "What is the photoelectric effect?",
+  "Why should I care about it?",
+  "How can Planck's constant be derived using it?"
+]
 </script>
 
 <template>
   <PresentationContainer id="#app">
-    <AAATitleSlide />
-    <BBBSecondSlide />
-    <section>
-  <h2>The Lorenz Equations</h2>
-  \[\begin{aligned}
-  \dot{x} &amp; = \sigma(y-x) \\
-  \dot{y} &amp; = \rho x - y - xz \\
-  \dot{z} &amp; = -\beta z + xy
-  \end{aligned} \]
-</section>
-<section>
-  
-</section>
+    <TitleSlide />
+    <TopicOverview :bigIdeas="bigIdeas" />
+    <FirstTopicSlide />
+    <TopicOverviewReminder :bigIdeas="bigIdeas" />
+    <SecondTopicSlide />
+    <FinalTopicOverview :bigIdeas="bigIdeas" />
+    <FinalTopicSlide />
+    <TopicOverviewRecap :bigIdeas="bigIdeas" />
   </PresentationContainer>
 </template>
 
 <style>
 #app {
-  font-family: "Avenir", Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  margin-top: 20px;
   height: 90vh;
 }
 </style>

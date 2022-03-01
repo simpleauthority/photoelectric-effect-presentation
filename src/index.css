@@ -1,0 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    --overall-font: 'Inter', sans-serif;
+    --r-main-font: var(--overall-font);
+    --r-heading-font: var(--overall-font);
+    font-family: var(--overall-font);
+}
+
+.strikethrough {
+    text-decoration: line-through;
+}
