@@ -13,3 +13,9 @@
         </div>
     </section>
 </template>
+
+<style scoped>
+img {
+    height: 512px;
+}
+</style>

@@ -12,15 +12,15 @@ defineProps({
 <template>
     <section>
         <section data-auto-animate>
-            <h3>Electron energy levels? Planck's constant?</h3>
-            <div class="mt-20"></div>
+            <h3 data-id="head">Electron energy levels?<br />Planck's constant?</h3>
+            <div data-id="margin" class="mt-5"></div>
             <div data-id="img2list" class="flex justify-center items-center">
                 <img src="@/images/cat-what.gif" alt="Confused cat" />
             </div>
         </section>
         <section data-auto-animate>
-            <h3>Electron energy levels? Planck's constant?</h3>
-            <div class="mt-20"></div>
+            <h3 data-id="head">Electron energy levels?<br />Planck's constant?</h3>
+            <div data-id="margin" class="mt-20"></div>
             <OrderedList
                 data-id="img2list"
                 :items="bigIdeas"
@@ -33,6 +33,6 @@ defineProps({
 
 <style scoped>
 img {
-     height: 300px;
+     height: 400px;
 }
 </style>

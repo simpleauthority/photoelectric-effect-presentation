@@ -13,6 +13,9 @@ import "reveal.js/plugin/highlight/monokai.css";
 
 onMounted(() => {
   Reveal.initialize({
+      center: false,
+      width: 1280, // use 16:9 aspect ratio vs default 4:3
+      height: 720,
       plugins: [Highlight, KaTeX]
   })
 })
